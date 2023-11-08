@@ -1,0 +1,23 @@
+@import './reset.scss';
+@import './font.scss';
+@import './color.scss';
+@import './space.scss';
+@import './text.scss';
+@import './button.scss';
+@import './custom-antd.scss';
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-rendering: optimizeSpeed;
+}
+
+#root {
+  height: 100%;
+}
