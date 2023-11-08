@@ -53,6 +53,7 @@
     "eslint-config-react-app": "^7.0.1",
     "git-scm-hooks": "^0.0.6",
     "prettier": "^2.8.8",
+    "rsbuild-plugin-print": "^0.0.1",
     "sass": "^1.69.5",
     "source-map-explorer": "^2.5.3",
     "typescript": "^4.9.5",
