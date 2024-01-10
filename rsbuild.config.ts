@@ -8,11 +8,25 @@ export default defineConfig({
       'process.env': JSON.stringify(process.env),
     },
   },
+  // output: {
+  //   distPath: {
+  //     image: 'assets',
+  //     svg: 'assets',
+  //     font: 'assets',
+  //     media: 'assets',
+  //   },
+  // },
   // dev: {
   //   assetPrefix: '/',
   // },
   // output: {
   //   copy: [{ from: './public', to: 'public' }],
+  // },
+  // server: {
+  //   publicDir: {
+  //     name: 'public',
+  //     copyOnBuild: false,
+  //   },
   // },
   plugins: [
     pluginReact(),

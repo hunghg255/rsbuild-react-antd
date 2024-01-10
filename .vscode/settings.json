@@ -7,7 +7,7 @@
     "strings": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "workbench.tree.indent": 14,
   "workbench.tree.renderIndentGuides": "always",

@@ -5,10 +5,12 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import ButtonPrimary from '@/components/UI/Button/ButtonPrimary';
+import { Icon } from '@/components/UI/IconFont/Icon';
 import Text from '@/components/UI/Text';
 // import { useAuth } from '@/store/auth/useAuth';
 
 import styles from './index.module.scss';
+import img from '../../../public/images/logo.png?url';
 
 const SignIn = () => {
   return (
@@ -18,11 +20,12 @@ const SignIn = () => {
       </Helmet>
 
       <h1>{process.env.TITLE}</h1>
-
+      <Icon icon='t4font-ic-sun' />
       <div className={styles.loginWrap}>
-        <img src='public/svg/logo.svg' alt='logo' />
+        <img src={'images/logo.png'} alt='logo' />
+        <img src={img} alt='logo' />
         <Text type='heading3-bold' className='text-center mb-20' element='h1'>
-          Đăng nhập vào IC Publisher
+          Đăng nhập vào IC Pusblisher
         </Text>
         <Form layout='vertical'>
           <Form.Item
