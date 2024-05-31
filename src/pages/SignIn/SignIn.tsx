@@ -10,7 +10,6 @@ import Text from '@/components/UI/Text';
 // import { useAuth } from '@/store/auth/useAuth';
 
 import styles from './index.module.scss';
-import img from '../../../public/images/logo.png?url';
 
 const SignIn = () => {
   return (
@@ -19,11 +18,9 @@ const SignIn = () => {
         <title>Sign In</title>
       </Helmet>
 
-      <h1>{process.env.TITLE}</h1>
       <Icon icon='t4font-ic-sun' />
       <div className={styles.loginWrap}>
         <img src={'images/logo.png'} alt='logo' />
-        <img src={img} alt='logo' />
         <Text type='heading3-bold' className='text-center mb-20' element='h1'>
           Đăng nhập vào IC Pusblisher
         </Text>

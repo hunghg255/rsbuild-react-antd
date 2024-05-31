@@ -2,6 +2,10 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginPrint } from 'rsbuild-plugin-print';
 import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
+import { pluginSass } from '@rsbuild/plugin-sass';
+import { pluginReactInspector } from 'rsbuild-plugin-react-inspector';
+import { pluginConsoleDebug } from 'rsbuild-plugin-console-debug';
+
 export default defineConfig({
   source: {
     define: {
@@ -41,6 +45,9 @@ export default defineConfig({
         },
       ],
     }),
+    pluginSass(),
+    pluginConsoleDebug(),
+    pluginReactInspector(),
   ],
   tools: {
     rspack(config, { appendPlugins }) {
