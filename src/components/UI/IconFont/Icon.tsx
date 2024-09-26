@@ -1,14 +1,14 @@
-// @ts-ignore
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 
 import classNames from 'classnames';
 
-import { T4fontClassname } from '../../../../public/t4font/t4font.js';
+import { Ticon } from '../../../../public/svgtocss/icon-type';
 
 export const Icon = ({
   className = '',
   ...props
-}: React.SVGProps<SVGSVGElement> & { icon: T4fontClassname; className?: string }) => {
+}: React.SVGProps<SVGSVGElement> & { icon: Ticon; className?: string }) => {
   // @ts-ignore
   return <i className={classNames(props.icon, className)} {...props} />;
 };

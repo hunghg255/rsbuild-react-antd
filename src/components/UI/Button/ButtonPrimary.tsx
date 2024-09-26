@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Button, { ButtonProps } from '@/components/UI/Button';
-import Text from '@/components/UI/Text';
+import Button, { ButtonProps } from '~/components/UI/Button';
+import Text from '~/components/UI/Text';
 
 type TButtonPrimary = Omit<ButtonProps, 'children'> & {
   children: string;

@@ -1,6 +1,7 @@
+/* eslint-disable no-empty */
 import { useNavigate } from 'react-router-dom';
 
-import { ROUTE_PATH } from '@/routes/route.constant';
+import { ROUTE_PATH } from '~/routes/route.constant';
 
 export interface IAuth {
   loading?: boolean;
@@ -42,7 +43,6 @@ export const useAuth = () => {
       setAuthData(data);
       navigate(ROUTE_PATH.REPORT);
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.log(error);
     }
   };

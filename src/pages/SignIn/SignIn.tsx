@@ -4,10 +4,9 @@ import { Form, Input } from 'antd';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import ButtonPrimary from '@/components/UI/Button/ButtonPrimary';
-import { Icon } from '@/components/UI/IconFont/Icon';
-import Text from '@/components/UI/Text';
-// import { useAuth } from '@/store/auth/useAuth';
+import ButtonPrimary from '~/components/UI/Button/ButtonPrimary';
+import Text from '~/components/UI/Text';
+// import { useAuth } from '~/store/auth/useAuth';
 
 import styles from './index.module.scss';
 
@@ -18,11 +17,10 @@ const SignIn = () => {
         <title>Sign In</title>
       </Helmet>
 
-      <Icon icon='t4font-ic-sun' />
       <div className={styles.loginWrap}>
         <img src={'images/logo.png'} alt='logo' />
         <Text type='heading3-bold' className='text-center mb-20' element='h1'>
-          Đăng nhập vào IC Pusblisher
+          Đăng nhập
         </Text>
         <Form layout='vertical'>
           <Form.Item

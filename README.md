@@ -1,5 +1,3 @@
-# Rsbuild + Antd + Jotai
-
 ## Getting Started
 
 First, run the development server:
@@ -16,14 +14,14 @@ npm run build
 npm run preview
 ```
 
-## Gen Font
+## Gen Icon
 
 ```js
-// Chỉ Gen font với svg chuẩn 1 path
 
-1. Copy file svg to `public/svgs`
-2. Run command: `npm run gen-font`
-3. Check component `Icon` in `src/components/UI/Icon`
+1. Copy file svg to `public/svgIcon`
+2. Run command: `npm run gen-icon`
+3. Check component `Icon` in `src/components/UI/IconFont/Icon.tsx`
+4. View icon in `http://localhost:3000/public/svgtocss/icon-demo.html`
 ```
 
 ## Commit Convention

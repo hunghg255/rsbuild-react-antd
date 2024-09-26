@@ -1,8 +1,8 @@
-/* eslint-disable require-await */
+ 
 import TokenManager, { injectBearer } from 'brainless-token-manager';
 import { extend } from 'umi-request';
 
-import { getAccessToken, getRefreshToken } from '@/store/auth/useAuth';
+import { getAccessToken, getRefreshToken } from '~/store/auth/useAuth';
 
 const REQ_TIMEOUT = 25 * 1000;
 

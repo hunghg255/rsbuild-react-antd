@@ -2,7 +2,7 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import Loading from '@/components/UI/Loading';
+import Loading from '~/components/UI/Loading';
 
 export interface ButtonProps {
   type?: 'primary' | 'secondary';

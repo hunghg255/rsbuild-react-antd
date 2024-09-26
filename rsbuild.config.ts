@@ -3,10 +3,13 @@ import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginPrint } from 'rsbuild-plugin-print';
 import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 import { pluginSass } from '@rsbuild/plugin-sass';
-import { pluginReactInspector } from 'rsbuild-plugin-react-inspector';
+// import { pluginReactInspector } from 'rsbuild-plugin-react-inspector';
 import { pluginConsoleDebug } from 'rsbuild-plugin-console-debug';
 
 export default defineConfig({
+  server: {
+    port: 4005,
+  },
   source: {
     define: {
       'process.env': JSON.stringify(process.env),
@@ -38,8 +41,8 @@ export default defineConfig({
       info: [
         ({ bold, cyan, green }) => {
           return {
-            text: `${green('➜')} ${bold('Font Icon:')} ${bold(
-              cyan('http://localhost:4005/public/t4font/index.html'),
+            text: `${green('➜')} ${bold('Icon:')} ${bold(
+              cyan('http://localhost:4005/svgtocss/icon-demo.html'),
             )}`,
           };
         },
@@ -47,7 +50,7 @@ export default defineConfig({
     }),
     pluginSass(),
     pluginConsoleDebug(),
-    pluginReactInspector(),
+    // pluginReactInspector(),
   ],
   tools: {
     rspack(config, { appendPlugins }) {
