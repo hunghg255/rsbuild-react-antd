@@ -1,8 +1,9 @@
 {
   "name": "rsbuild-react-antd",
-  "private": true,
-  "version": "0.0.1",
   "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
@@ -72,6 +73,5 @@
   "git-hooks": {
     "pre-commit": "npm run lint",
     "commit-msg": "npm run verify-commit"
-  },
-  "packageManager": "pnpm@9.15.4"
+  }
 }
