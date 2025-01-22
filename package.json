@@ -39,7 +39,7 @@
     "umi-request": "^1.4.0"
   },
   "devDependencies": {
-    "@hunghg255/eslint-config": "^0.0.15",
+    "@hunghg255/eslint-config": "^0.0.16",
     "@rsbuild/core": "^1.2.0",
     "@rsbuild/plugin-react": "^1.1.0",
     "@rsbuild/plugin-sass": "1.2.0",
