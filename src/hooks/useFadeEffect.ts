@@ -1,9 +1,8 @@
- 
 import React from 'react';
 
 const TIMEOUT = 1000;
 
-const reducer = (state: any, action: any) => {
+function reducer (state: any, action: any) {
   switch (action.type) {
     case 'start': {
       return {
@@ -21,7 +20,7 @@ const reducer = (state: any, action: any) => {
       return state;
     }
   }
-};
+}
 
 export const _popoverStyles = {
   opacity: 0,
@@ -36,7 +35,7 @@ export const _popoverVisibleStyles = {
   transitionTimingFunction: 'cubic-bezier(0, 0, 1, 1)',
 };
 
-export const useFadeEffect = (visible: boolean) => {
+export function useFadeEffect (visible: boolean) {
   const ref = React.useRef(null);
   const visibleRef = React.useRef(false);
   const [state, setState] = React.useReducer(reducer, {
@@ -122,4 +121,4 @@ export const useFadeEffect = (visible: boolean) => {
   );
   const _isTransitioning = isTransitioning || shouldBeVisible || visible;
   return [_isTransitioning, shouldBeVisible, _ref];
-};
+}

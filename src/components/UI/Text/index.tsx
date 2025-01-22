@@ -73,7 +73,7 @@ const Text: React.FC<TextProps> = ({
   color,
   disabled = false,
   className = '',
-  onClick = () => {},
+  onClick = () => void 0,
   children,
   element = 'p',
 }) => {

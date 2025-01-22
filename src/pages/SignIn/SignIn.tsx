@@ -4,28 +4,36 @@ import { Form, Input } from 'antd';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import ButtonPrimary from '~/components/UI/Button/ButtonPrimary';
 import Text from '~/components/UI/Text';
 // import { useAuth } from '~/store/auth/useAuth';
 
 import styles from './index.module.scss';
 
-const SignIn = () => {
+function SignIn () {
   return (
     <>
       <Helmet>
-        <title>Sign In</title>
+        <title>
+          Sign In
+        </title>
       </Helmet>
 
       <div className={styles.loginWrap}>
-        <img src={'images/logo.png'} alt='logo' />
-        <Text type='heading3-bold' className='text-center mb-20' element='h1'>
+        <img alt='logo'
+          src={'images/logo.png'}
+        />
+
+        <Text className='mb-20 text-center text-[red]'
+          element='h1'
+          type='heading3-bold'
+        >
           Đăng nhập
         </Text>
+
         <Form layout='vertical'>
           <Form.Item
-            name='email'
             label='Email'
+            name='email'
             rules={[
               {
                 required: true,
@@ -41,8 +49,8 @@ const SignIn = () => {
           </Form.Item>
 
           <Form.Item
-            name='password'
             label='Mật khẩu'
+            name='password'
             rules={[
               {
                 required: true,
@@ -57,15 +65,19 @@ const SignIn = () => {
             <Input placeholder='Mật khẩu' />
           </Form.Item>
 
-          <Text type='heading5-regular' color='primary-light' className='mb-20 text-right'>
-            <Link to='/forgot-password'>Quên mật khẩu?</Link>
+          <Text className='mb-20 text-right'
+            color='primary-light'
+            type='heading5-regular'
+          >
+            <Link to='/forgot-password'>
+              Quên mật khẩu?
+            </Link>
           </Text>
 
-          <ButtonPrimary htmlType='submit'>Đăng nhập</ButtonPrimary>
         </Form>
       </div>
     </>
   );
-};
+}
 
 export default SignIn;

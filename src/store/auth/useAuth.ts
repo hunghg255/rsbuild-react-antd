@@ -1,4 +1,3 @@
-/* eslint-disable no-empty */
 import { useNavigate } from 'react-router-dom';
 
 import { ROUTE_PATH } from '~/routes/route.constant';
@@ -10,32 +9,36 @@ export interface IAuth {
   expiredTime: number;
 }
 
-const getAuthLocalStorage = () => {
+function getAuthLocalStorage () {
   try {
     const authData = localStorage.getItem(process.env.LOCAL_STORAGE_KEY);
     return authData && JSON.parse(authData);
-  } catch {}
-};
+  } catch {
+    return null;
+  }
+}
 
-export const getAccessToken = () => {
+export function getAccessToken () {
   const data: any = getAuthLocalStorage();
 
   return data?.token || '';
-};
+}
 
-export const getRefreshToken = () => {
+export function getRefreshToken () {
   const data: any = getAuthLocalStorage();
 
   return data?.refreshToken || '';
-};
+}
 
-const setAuthData = (data: IAuth): void => {
-  localStorage.setItem(process.env.LOCAL_STORAGE_KEY as string, JSON.stringify(data));
-};
+function setAuthData (data: IAuth): void {
+  localStorage.setItem(process.env.LOCAL_STORAGE_KEY, JSON.stringify(data));
+}
 
-const onLogout = async () => {};
+async function onLogout () {
+  return true;
+}
 
-export const useAuth = () => {
+export function useAuth () {
   const navigate = useNavigate();
 
   const onLogin = (data: IAuth) => {
@@ -53,4 +56,4 @@ export const useAuth = () => {
     onLogin,
     onLogout,
   };
-};
+}

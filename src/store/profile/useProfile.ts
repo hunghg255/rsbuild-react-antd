@@ -1,1 +1,3 @@
-export const useProfile = () => {};
+export function useProfile () {
+  return true;
+}

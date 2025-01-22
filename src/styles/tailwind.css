@@ -1,0 +1,14 @@
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 12px;
+
+  @media (min-width: theme("screens.md")) {
+    font-size: 14px;
+  }
+
+  @media (min-width: theme("screens.lg")) {
+    font-size: 16px;
+  }
+}

@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 import styles from './index.module.scss';
 
-const AuthLayout = () => {
+function AuthLayout () {
   return (
     <Suspense fallback={undefined}>
       <div className={styles.authLayout}>
@@ -12,6 +12,6 @@ const AuthLayout = () => {
       </div>
     </Suspense>
   );
-};
+}
 
 export default AuthLayout;

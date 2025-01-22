@@ -44,9 +44,11 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button className={classes} onClick={onClickBtn} type={htmlType}>
+    <button className={classes}
+      onClick={onClickBtn}
+      type={htmlType}
+    >
       {children}
-
       {loading && <Loading />}
     </button>
   );

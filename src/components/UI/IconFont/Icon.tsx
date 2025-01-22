@@ -3,12 +3,16 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import { Ticon } from '../../../../public/svgtocss/icon-type';
+import { type Ticon } from '../../../../public/svgtocss/icon-type';
 
-export const Icon = ({
+export function Icon ({
   className = '',
   ...props
-}: React.SVGProps<SVGSVGElement> & { icon: Ticon; className?: string }) => {
+}: React.SVGProps<SVGSVGElement> & { icon: Ticon; className?: string }) {
   // @ts-ignore
-  return <i className={classNames(props.icon, className)} {...props} />;
-};
+  return (
+    <i className={classNames(props.icon, className)}
+      {...props}
+    />
+  );
+}

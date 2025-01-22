@@ -10,22 +10,31 @@ import Text from '~/components/UI/Text';
 
 import styles from './index.module.scss';
 
-const ForgotPassword = () => {
+function ForgotPassword () {
   return (
     <>
       <Helmet>
-        <title>Forgot Password</title>
+        <title>
+          Forgot Password
+        </title>
       </Helmet>
 
       <div className={styles.loginWrap}>
-        <img src='public/svg/logo.svg' alt='logo' />
-        <Text type='heading3-bold' className='text-center mb-20' element='h1'>
+        <img alt='logo'
+          src='public/svg/logo.svg'
+        />
+
+        <Text className='mb-20 text-center'
+          element='h1'
+          type='heading3-bold'
+        >
           Quên mật khẩu
         </Text>
+
         <Form layout='vertical'>
           <Form.Item
-            name='email'
             label='Email'
+            name='email'
             rules={[
               {
                 required: true,
@@ -40,19 +49,26 @@ const ForgotPassword = () => {
             <Input placeholder='Nhập email' />
           </Form.Item>
 
-          <ButtonPrimary htmlType='submit' className='mb-20'>
+          <ButtonPrimary className='mb-20'
+            htmlType='submit'
+          >
             Đăng nhập
           </ButtonPrimary>
 
-          <Text type='heading5-regular' color='cblack' className='flex-center'>
+          <Text className='flex-center'
+            color='cblack'
+            type='heading5-regular'
+          >
             <Link to='/sign-in'>
-              <Icon icon='t4font-ic-eva_arrow-ios-back-fill' /> Quay lại đăng nhập
+              <Icon icon='t4font-ic-eva_arrow-ios-back-fill' />
+              {' '}
+              Quay lại đăng nhập
             </Link>
           </Text>
         </Form>
       </div>
     </>
   );
-};
+}
 
 export default ForgotPassword;

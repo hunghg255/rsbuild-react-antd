@@ -7,7 +7,7 @@ import { ROUTE_PATH } from '~/routes/route.constant';
 import { getAccessToken } from '~/store/auth/useAuth';
 import { useProfile } from '~/store/profile/useProfile';
 
-const AppLayout = () => {
+function AppLayout () {
   const navigate = useNavigate();
   const location = useLocation();
   useProfile();
@@ -28,6 +28,6 @@ const AppLayout = () => {
       <Outlet />
     </Suspense>
   );
-};
+}
 
 export default AppLayout;
