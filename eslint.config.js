@@ -6,12 +6,6 @@ export default [
   ...react(),
   ...tailwind.configs["flat/recommended"],
   {
-    rules: {
-      indent: 'off',
-      "@stylistic/semi": ["error", "always"]
-    },
-  },
-  {
     ignores: [
       'dist/**/*.ts',
       'dist/**',

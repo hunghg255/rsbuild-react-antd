@@ -1,11 +1,10 @@
-import { RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { router } from './routes/routes';
+import routes from '~pages';
 
 function App() {
-  console.log(process.env);
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={createBrowserRouter(routes)} />;
 }
 
 export default App;

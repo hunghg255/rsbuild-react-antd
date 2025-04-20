@@ -5,6 +5,7 @@ import { RsdoctorRspackPlugin } from '@rsdoctor/rspack-plugin';
 import { pluginSass } from '@rsbuild/plugin-sass';
 // import { pluginReactInspector } from 'rsbuild-plugin-react-inspector';
 import { pluginConsoleDebug } from 'rsbuild-plugin-console-debug';
+import { pluginReactGeneratePages} from 'rsbuild-react-generate-pages';
 
 export default defineConfig({
   server: {
@@ -36,6 +37,7 @@ export default defineConfig({
   //   },
   // },
   plugins: [
+    pluginReactGeneratePages(),
     pluginReact(),
     pluginPrint({
       info: [
